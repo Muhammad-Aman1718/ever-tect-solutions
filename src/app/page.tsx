@@ -1,5 +1,15 @@
-import Image from "next/image";
+import MainContainer from "@/components/MainContainer";
+import Navbar from "@/components/navbar/Navbar";
+import React from "react";
 
-export default function Home() {
-  return <div className=" text-red-500 " >hello</div>;
-}
+const Home = () => {
+  return (
+    <div className=" mx-auto ">
+      <MainContainer className=" border ">
+        <Navbar />
+      </MainContainer>
+    </div>
+  );
+};
+
+export default Home;
