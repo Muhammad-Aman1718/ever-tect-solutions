@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="h-[4000px] ">
       <div className=" bg-[#F5F7FA] ">
-        <MainContainer className=" border ">
+        <MainContainer className="  ">
           <Navbar />
           <HeroSection />
         </MainContainer>
