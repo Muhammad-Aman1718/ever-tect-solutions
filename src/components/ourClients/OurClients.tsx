@@ -9,12 +9,16 @@ import ClientImg6 from "../../../public/assets/ourClients/Logo (5).svg";
 
 const OurClients = () => {
   return (
-    <div>
-      <h1 className=" text-[#4D4D4D] text-[36px] font-semibold leading-[44px] ">
-        Our Clients
-      </h1>
-      <p>We have been working with some Fortune 500+ clients</p>
-      <div>
+    <div className=" flex flex-col items-center justify-center gap-y-4 py-10  ">
+      <div className=" flex flex-col items-center justify-center gap-y-2 ">
+        <h1 className=" text-[#4D4D4D] text-[36px] font-semibold leading-[44px] ">
+          Our Clients
+        </h1>
+        <p className=" text-[#717171] text-[18px] leading-[32px]  ">
+          We have been working with some Fortune 500+ clients
+        </p>
+      </div>
+      <div className=" flex items-center justify-around w-full ">
         <Image src={ClientImg1} alt="logo does not show " />
         <Image src={ClientImg2} alt="logo does not show " />
         <Image src={ClientImg3} alt="logo does not show " />
