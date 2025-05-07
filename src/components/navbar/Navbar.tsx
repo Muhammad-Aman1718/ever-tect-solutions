@@ -26,7 +26,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className=" border flex items-center justify-center flex-[1.5]  ">
-        <button className=" py-[10px] px-[40px] bg-[#4CAF4F] rounded-[4px] text-white text-[14px] ">
+        <button className=" py-[10px] px-[40px] bg-[#4CAF4F] rounded-[4px] text-white text-[14px]  hover:cursor-pointer  ">
           Login
         </button>
       </div>

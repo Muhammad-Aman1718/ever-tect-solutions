@@ -1,6 +1,7 @@
 import HeroSection from "@/components/heroSection/HeroSection";
 import MainContainer from "@/components/MainContainer";
 import Navbar from "@/components/navbar/Navbar";
+import OurClients from "@/components/ourClients/OurClients";
 import React from "react";
 
 const Home = () => {
@@ -12,6 +13,9 @@ const Home = () => {
           <HeroSection />
         </MainContainer>
       </div>
+      <MainContainer>
+        <OurClients />
+      </MainContainer>
     </div>
   );
 };
