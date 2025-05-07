@@ -2,20 +2,32 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className=" flex items-center justify-around  ">
-      <div>
+    <div className=" border  flex items-center justify-around  ">
+      <div className="border flex-1  ">
         <h1>IMG</h1>
       </div>
-      <div>
-        <ul className=" flex ">
-          <li>Home</li>
-          <li>Courses</li>
-          <li>Services</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+      <div className="border flex-1  ">
+        <ul className=" flex items-center  ">
+          <li className="leading-6 text-[#18191F] text-[16px] font-medium ">
+            Home
+          </li>
+          <li className="leading-6 text-[#18191F] text-[16px] font-medium ">
+            Courses
+          </li>
+          <li className="leading-6 text-[#18191F] text-[16px] font-medium ">
+            Services
+          </li>
+          <li className="leading-6 text-[#18191F] text-[16px] font-medium ">
+            About Us
+          </li>
+          <li className="leading-6 text-[#18191F] text-[16px] font-medium ">
+            Contact Us
+          </li>
         </ul>
       </div>
-      <button>Login</button>
+      <div className=" border flex-1  ">
+        <button>Login</button>
+      </div>
     </div>
   );
 };
