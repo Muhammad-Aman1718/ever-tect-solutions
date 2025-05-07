@@ -1,3 +1,4 @@
+import CoursesSection from "@/components/coursesSection/CoursesSection";
 import HeroSection from "@/components/heroSection/HeroSection";
 import MainContainer from "@/components/MainContainer";
 import Navbar from "@/components/navbar/Navbar";
@@ -17,6 +18,7 @@ const Home = () => {
       <MainContainer className="  ">
         <OurClients />
         <OurCommunity />
+        <CoursesSection />
       </MainContainer>
     </div>
   );
