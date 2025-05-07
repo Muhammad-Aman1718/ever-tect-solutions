@@ -3,11 +3,11 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className=" border  flex items-center justify-around  ">
-      <div className="border flex-1  ">
+      <div className="border flex-[1] ">
         <h1>IMG</h1>
       </div>
-      <div className="border flex-1  ">
-        <ul className=" flex items-center  ">
+      <div className="border flex-[3]  ">
+        <ul className=" flex items-center justify-around ">
           <li className="leading-6 text-[#18191F] text-[16px] font-medium ">
             Home
           </li>
@@ -25,8 +25,10 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className=" border flex-1  ">
-        <button>Login</button>
+      <div className=" border flex items-center justify-center flex-[1]  ">
+        <button className=" py-[10px] px-[20px] bg-[#4CAF4F] rounded-[8px] text-white text-[14px] ">
+          Login
+        </button>
       </div>
     </div>
   );
