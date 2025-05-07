@@ -4,6 +4,7 @@ import MainContainer from "@/components/MainContainer";
 import Navbar from "@/components/navbar/Navbar";
 import OurClients from "@/components/ourClients/OurClients";
 import OurCommunity from "@/components/ourCommunity/OurCommunity";
+import OurServicesSection from "@/components/ourServicesSection/OurServicesSection";
 import React from "react";
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
         <OurClients />
         <OurCommunity />
         <CoursesSection />
+        <OurServicesSection />
       </MainContainer>
     </div>
   );
