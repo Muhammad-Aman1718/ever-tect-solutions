@@ -12,7 +12,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="h-[4000px] ">
+    <div className="h-[5000px] ">
       <div className=" bg-[#F5F7FA] ">
         <MainContainer className="  ">
           <Navbar />
@@ -43,7 +43,7 @@ const Home = () => {
           <ContactUsSection />
         </MainContainer>
       </div>
-      <div className=" bg-[#E1F0FF] ">
+      <div className=" bg-[#112f4b] ">
         <MainContainer>
           <Footer />
         </MainContainer>
