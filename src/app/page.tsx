@@ -1,4 +1,6 @@
+import AboutUsSection from "@/components/aboutUsSection/AboutUsSection";
 import CoursesSection from "@/components/coursesSection/CoursesSection";
+import Footer from "@/components/footer/Footer";
 import HeroSection from "@/components/heroSection/HeroSection";
 import MainContainer from "@/components/MainContainer";
 import Navbar from "@/components/navbar/Navbar";
@@ -18,10 +20,26 @@ const Home = () => {
       </div>
       <MainContainer className="  ">
         <OurClients />
-        <OurCommunity />
-        <CoursesSection />
-        <OurServicesSection />
       </MainContainer>
+      <div className=" bg-[#F5F7FA] ">
+        <MainContainer>
+          <OurCommunity />
+        </MainContainer>
+      </div>
+      <MainContainer className="py-10 ">
+        <CoursesSection />
+      </MainContainer>
+      <div className=" bg-[#F5F7FA] py-10 ">
+        <MainContainer>
+          <OurServicesSection />
+        </MainContainer>
+      </div>
+      <AboutUsSection />
+      <div className=" bg-[#F5F7FA] ">
+        <MainContainer>
+          <Footer />
+        </MainContainer>
+      </div>
     </div>
   );
 };
