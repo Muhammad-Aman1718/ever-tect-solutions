@@ -5,7 +5,7 @@ const ContactUsSection = () => {
   return (
     <section className="py-16 ">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#2A75BB] mb-8 text-center">
+        <h2 className="text-3xl font-bold text-[#4D4D4D] mb-8 text-center">
           Contact Us
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 p-6 rounded-md shadow-md">

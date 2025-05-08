@@ -19,7 +19,7 @@ const Home = () => {
           <HeroSection />
         </MainContainer>
       </div>
-      <MainContainer className="  ">
+      <MainContainer className="">
         <OurClients />
       </MainContainer>
       <div className=" bg-[#F5F7FA] ">
@@ -41,6 +41,10 @@ const Home = () => {
       <div className=" bg-[#F5F7FA] ">
         <MainContainer>
           <ContactUsSection />
+        </MainContainer>
+      </div>
+      <div className=" bg-[#E1F0FF] ">
+        <MainContainer>
           <Footer />
         </MainContainer>
       </div>
