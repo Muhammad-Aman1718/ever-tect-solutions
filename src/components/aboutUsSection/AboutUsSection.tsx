@@ -22,7 +22,7 @@ const AboutUsSection = () => {
   return (
     <div>
       AboutUsSection
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 ">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-[#2A75BB] mb-8">
             Meet Our Team

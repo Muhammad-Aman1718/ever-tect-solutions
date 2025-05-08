@@ -1,4 +1,5 @@
 import AboutUsSection from "@/components/aboutUsSection/AboutUsSection";
+import ContactUsSection from "@/components/contactUsSection/ContactUsSection";
 import CoursesSection from "@/components/coursesSection/CoursesSection";
 import Footer from "@/components/footer/Footer";
 import HeroSection from "@/components/heroSection/HeroSection";
@@ -34,9 +35,12 @@ const Home = () => {
           <OurServicesSection />
         </MainContainer>
       </div>
-      <AboutUsSection />
+      <MainContainer>
+        <AboutUsSection />
+      </MainContainer>
       <div className=" bg-[#F5F7FA] ">
         <MainContainer>
+          <ContactUsSection />
           <Footer />
         </MainContainer>
       </div>
