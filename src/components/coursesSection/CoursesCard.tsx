@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const CoursesCard = () => {
   return (
-    <div className="max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden mx-auto hover:shadow-xl transition-shadow duration-300">
+    <div className=" bg-white rounded-2xl shadow-lg overflow-hidden  hover:shadow-xl transition-shadow duration-300">
       <Image
         src={WebDevelopmentCoursesImg}
         alt="Course Banner"
@@ -23,10 +23,10 @@ const CoursesCard = () => {
         </ul>
 
         <div className="flex justify-between gap-2">
-          <button className="flex-1 border border-blue-600 text-blue-600 py-2 rounded-xl hover:bg-blue-50 transition">
+          <button className="flex-1 border border-[#2A75BB] text-[#2A75BB] py-2 rounded-xl hover:bg-[#2A75BB1a] hover:cursor-pointer transition">
             View Details
           </button>
-          <button className="flex-1 bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition">
+          <button className="flex-1 bg-[#2A75BB] text-white py-2 rounded-xl hover:bg-[#225f99] transition hover:cursor-pointer ">
             Apply Now
           </button>
         </div>
