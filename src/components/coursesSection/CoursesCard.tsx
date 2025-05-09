@@ -5,10 +5,14 @@ import WebDevelopmentCoursesImg from "../../../public/assets/courses/web-dev.jpe
 interface CoursesCardPropsTypes {
   cardImg?: string | StaticImageData;
   courseHeading?: string;
-  
+  coursePoints?: string[];
 }
 
-const CoursesCard: React.FC<CoursesCardPropsTypes> = ({}) => {
+const CoursesCard: React.FC<CoursesCardPropsTypes> = ({
+  cardImg,
+  courseHeading,
+  coursePoints,
+}) => {
   return (
     <div className=" bg-white rounded-2xl shadow-lg overflow-hidden  hover:shadow-xl transition-shadow duration-300">
       <Image
@@ -19,13 +23,12 @@ const CoursesCard: React.FC<CoursesCardPropsTypes> = ({}) => {
 
       <div className="p-6">
         <h2 className="text-xl font-semibold text-gray-800 mb-4">
-          Full Stack Web Development
+          Full Stack Web Development {courseHeading}
         </h2>
         <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2 mb-6">
-          <li>12-week intensive program</li>
-          <li>Live instructor-led classes</li>
-          <li>Hands-on projects and assignments</li>
-          <li>100% job assistance after completion</li>
+          {coursePoints?.map((point, index) => (
+            <li key={index}> {point} </li>
+          ))}
         </ul>
 
         <div className="flex justify-between gap-2">

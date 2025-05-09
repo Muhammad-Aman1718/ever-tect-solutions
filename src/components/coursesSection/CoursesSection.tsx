@@ -8,9 +8,47 @@ const CoursesSection = () => {
         Courses
       </h1>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]  gap-[40px] lg:grid-cols-3 ">
-        <CoursesCard />
-        <CoursesCard />
-        <CoursesCard />
+        <CoursesCard
+          courseHeading="Full Stack Web Development"
+          coursePoints={[
+            "12-week intensive program",
+            "Live instructor-led classes",
+            "Hands-on projects and assignments",
+            "100% job assistance after completion",
+            "Resume building & interview prep",
+            "12-week intensive program",
+            "Live instructor-led classes",
+            "Hands-on projects and assignments",
+            "100% job assistance after completion",
+            "Resume building & interview prep",
+          ]}
+        />
+        <CoursesCard
+          courseHeading="Full Stack Web Development"
+          coursePoints={[
+            "12-week intensive program",
+            "Live instructor-led classes",
+            "Hands-on projects and assignments",
+            // "100% job assistance after completion",
+            // "Resume building & interview prep",
+            // "12-week intensive program",
+            // "Live instructor-led classes",
+            // "Hands-on projects and assignments",
+            // "100% job assistance after completion",
+            "Resume building & interview prep",
+          ]}
+        />
+        <CoursesCard
+          courseHeading="Full Stack Web Development"
+          coursePoints={[
+            "Resume building & interview prep",
+            "12-week intensive program",
+            "Live instructor-led classes",
+            "Hands-on projects and assignments",
+            "100% job assistance after completion",
+            "Resume building & interview prep",
+          ]}
+        />
         <CoursesCard />
         <CoursesCard />
       </div>
