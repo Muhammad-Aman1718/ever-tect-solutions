@@ -1,5 +1,5 @@
 import React from "react";
-import ContactUsInput from "../inputs/ContactUsInput";
+import InputField from "../inputs/InputField";
 
 const ContactUsSection = () => {
   return (
@@ -11,18 +11,18 @@ const ContactUsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 p-6 rounded-md shadow-md">
           {/* Left Column */}
           <div className="space-y-4">
-            <ContactUsInput
+            <InputField
               label="Name"
               placeholder="Enter your name"
               inputType="text"
             />
 
-            <ContactUsInput
+            <InputField
               label="Phone Number (Optional)"
               placeholder="+92-300-1234567"
               inputType="tel"
             />
-            <ContactUsInput
+            <InputField
               label="Subject"
               placeholder="Inquiry about services"
               inputType="text"
@@ -31,7 +31,7 @@ const ContactUsSection = () => {
 
           <div className="space-y-4">
             <div>
-              <ContactUsInput label="Email " placeholder=" Enter your email" />
+              <InputField label="Email " placeholder=" Enter your email" />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">
