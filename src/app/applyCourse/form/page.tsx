@@ -4,18 +4,80 @@ import MainContainer from "@/components/MainContainer";
 import React from "react";
 
 const Form = () => {
+  const courseOptions = [
+    "Web Development (MERN Stack)",
+    "Graphic Designing Pro",
+    "Digital Marketing Pro",
+    "E-Commerce",
+    "Mobile App Development",
+    "Python Programming",
+    "Digital Business Booster",
+    "AI Media Production",
+    "WordPress Web Development",
+  ];
   return (
     <div>
       <MainContainer>
-        <InputField
-          label="Full Name :"
-          placeholder="Enter your name"
-          inputType="text"
-        />
-        <InputField label="" />
-        <InputField />
-        <InputField />
-        <InputField />
+        <h1 className="text-center "> Apply Course</h1>
+        <div className="grid grid-cols-2  gap-x-10 gap-y-7 ">
+          <InputField
+            label="Full Name"
+            labelClassName=" font-bold "
+            placeholder="Enter your full name"
+            inputType="text"
+          />
+          <InputField
+            label="Father Name"
+            labelClassName="font-bold"
+            placeholder="Enter your father name "
+            inputType="text"
+          />
+          <InputField
+            label="Email Address"
+            labelClassName="font-bold"
+            placeholder="Enter your email address"
+          />
+          <InputField
+            label="Phone Number"
+            labelClassName="font-bold"
+            placeholder="+92 (300) 1234567"
+          />
+          <InputField
+            label="Phone Number"
+            labelClassName="font-bold"
+            placeholder="+92 (300) 1234567"
+          />
+
+          <div>
+            <label className="block mb-1 text-gray-700  font-bold">
+              Select Course
+            </label>
+            <select
+              name="course"
+              required
+              className="w-full border border-gray-300 rounded-md text-[#504f4f] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition"
+              // onChange={handleChange}
+            >
+              <option value="">-- Choose a course --</option>
+              {courseOptions.map((course, idx) => (
+                <option key={idx} value={course}>
+                  {course}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block mb-1 text-gray-700  font-bold">
+              Message (optional)
+            </label>
+            <textarea
+              name="message"
+              rows={4}
+              className=" w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition"
+              // onChange={handleChange}
+            />
+          </div>
+        </div>
       </MainContainer>
     </div>
   );

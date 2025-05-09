@@ -17,15 +17,13 @@ const InputField: React.FC<ContactUsInputPropsTypes> = ({
 }) => {
   return (
     <div>
-      <label
-        className={` ${labelClassName} block mb-1 font-medium text-gray-700 `}
-      >
+      <label className={` ${labelClassName} block mb-1  text-gray-700 `}>
         {label}
       </label>
       <input
         type={inputType}
         placeholder={placeholder}
-        className={` ${inputClassName} w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition`}
+        className={` ${inputClassName} placeholder:text-[#504f4f] w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition`}
       />
     </div>
   );

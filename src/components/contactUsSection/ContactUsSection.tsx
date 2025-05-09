@@ -12,17 +12,20 @@ const ContactUsSection = () => {
           {/* Left Column */}
           <div className="space-y-4">
             <InputField
+              labelClassName="font-medium"
               label="Name"
               placeholder="Enter your name"
               inputType="text"
             />
 
             <InputField
+              labelClassName="font-medium"
               label="Phone Number (Optional)"
               placeholder="+92-300-1234567"
               inputType="tel"
             />
             <InputField
+              labelClassName="font-medium"
               label="Subject"
               placeholder="Inquiry about services"
               inputType="text"
@@ -31,7 +34,11 @@ const ContactUsSection = () => {
 
           <div className="space-y-4">
             <div>
-              <InputField label="Email " placeholder=" Enter your email" />
+              <InputField
+                label="Email "
+                labelClassName="font-medium"
+                placeholder=" Enter your email"
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">
