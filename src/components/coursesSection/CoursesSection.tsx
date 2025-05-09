@@ -9,44 +9,33 @@ const CoursesSection = () => {
       </h1>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]  gap-[40px] lg:grid-cols-3 ">
         <CoursesCard
-          courseHeading="Full Stack Web Development"
+          courseHeading="Web Development (Mern Stack) "
           coursePoints={[
-            "12-week intensive program",
-            "Live instructor-led classes",
-            "Hands-on projects and assignments",
-            "100% job assistance after completion",
-            "Resume building & interview prep",
-            "12-week intensive program",
-            "Live instructor-led classes",
-            "Hands-on projects and assignments",
-            "100% job assistance after completion",
-            "Resume building & interview prep",
+            "Html5 / Css3",
+            "Bootstrap / Tailwind",
+            "Javascript",
+            "React.js",
+            "Node.js",
           ]}
         />
         <CoursesCard
-          courseHeading="Full Stack Web Development"
+          courseHeading="Graphic Designing Pro"
           coursePoints={[
-            "12-week intensive program",
-            "Live instructor-led classes",
-            "Hands-on projects and assignments",
-            // "100% job assistance after completion",
-            // "Resume building & interview prep",
-            // "12-week intensive program",
-            // "Live instructor-led classes",
-            // "Hands-on projects and assignments",
-            // "100% job assistance after completion",
-            "Resume building & interview prep",
+            "Canva Pro",
+            "Adobe Products Family",
+            "Coral Draw",
+            "Filmora (UI/UX)",
+            "AI Video Creations Tools Creations",
           ]}
         />
         <CoursesCard
-          courseHeading="Full Stack Web Development"
+          courseHeading="Digital Marketing Pro"
           coursePoints={[
-            "Resume building & interview prep",
-            "12-week intensive program",
-            "Live instructor-led classes",
-            "Hands-on projects and assignments",
-            "100% job assistance after completion",
-            "Resume building & interview prep",
+            "Graphics Designing",
+            "Social Media Marketing",
+            "Web Development (Wordpress/Shoppify)",
+            "SEO (Search Engine Optimization)",
+            "E-Commerce Store",
           ]}
         />
         <CoursesCard />

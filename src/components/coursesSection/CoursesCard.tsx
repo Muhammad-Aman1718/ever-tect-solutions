@@ -23,7 +23,7 @@ const CoursesCard: React.FC<CoursesCardPropsTypes> = ({
 
       <div className="p-6">
         <h2 className="text-xl font-semibold text-gray-800 mb-4">
-          Full Stack Web Development {courseHeading}
+          {courseHeading}
         </h2>
         <ul className="list-disc pl-5 text-gray-600 text-sm space-y-2 mb-6">
           {coursePoints?.map((point, index) => (
