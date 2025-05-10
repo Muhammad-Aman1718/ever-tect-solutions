@@ -1,3 +1,5 @@
+import { courseForm } from "@/store/slices/courseForm";
+import { useAppDispatch } from "@/store/store";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -12,11 +14,40 @@ const useApplyCourse = () => {
   const [course, setCourse] = useState("");
   const [message, setMessage] = useState("");
 
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
     if (selectedCourse) {
       setCourse(selectedCourse);
     }
   }, [selectedCourse]);
+
+  const userData = {
+    fullName,
+    fatherName,
+    email,
+    phoneNumber,
+    education,
+    course,
+    message,
+  };
+
+  const handleSubmit = async () => {
+    try {
+      console.log(" handleSubmit was clicked");
+
+      await dispatch(courseForm(userData)); // assuming this is an async action
+      setFullName("");
+      setFatherName("");
+      setEmail("");
+      setPhoneNumber("");
+      setEducation("");
+      setCourse("");
+      setMessage("");
+    } catch (error) {
+      // Handle error (e.g., show an error message)
+    }
+  };
 
   return {
     fullName,
@@ -33,6 +64,7 @@ const useApplyCourse = () => {
     setCourse,
     message,
     setMessage,
+    handleSubmit,
   };
 };
 

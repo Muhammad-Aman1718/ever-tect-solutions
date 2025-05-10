@@ -21,6 +21,7 @@ const Form = () => {
     setCourse,
     message,
     setMessage,
+    handleSubmit,
   } = useApplyCourse();
 
   return (
@@ -116,7 +117,10 @@ const Form = () => {
             />
           </div>
         </div>
-        <button className="bg-[#2A75BB] text-white font-semibold rounded-xl py-3 px-6 mt-10 transition-colors duration-300 ease-in-out hover:bg-[#1e5a93] cursor-pointer ">
+        <button
+          onClick={handleSubmit}
+          className="bg-[#2A75BB] text-white font-semibold rounded-xl py-3 px-6 mt-10 transition-colors duration-300 ease-in-out hover:bg-[#1e5a93] cursor-pointer "
+        >
           Apply Now
         </button>
       </MainContainer>

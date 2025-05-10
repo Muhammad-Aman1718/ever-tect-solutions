@@ -1,56 +1,122 @@
+// import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+// import axiosInstance from "@/lib/axiosInstance";
+// import { AxiosError } from "axios";
+// import { userData } from "@/types/types";
+
+// export const courseForm = createAsyncThunk(
+//   "courseForm/post",
+//   async (userData) => {
+//     try {
+//       const response = await axiosInstance.post("userData", userData);
+//       console.log(
+//         "this is response on slice post user data data =========> ",
+//         response.data
+//       );
+
+//       return response.data;
+//     } catch (error) {
+//       const errorAxios = error as AxiosError;
+//       const errorMessage =
+//         (errorAxios.response?.data as { message?: string })?.message ||
+//         "Something went wrong!";
+//       throw new Error(errorMessage);
+//     }
+//   }
+// );
+
+// interface courseFormState {
+//   userData: userData[];
+//   loading: boolean;
+//   error: string | null;
+// }
+
+// const initialState: courseFormState = {
+//   userData: [],
+//   loading: false,
+//   error: null,
+// };
+
+// const courseFormSlice = createSlice({
+//   name: "car",
+//   initialState,
+//   reducers: {},
+//   extraReducers(builder) {
+//     builder
+//       .addCase(courseForm.pending, (state) => {
+//         state.loading = true;
+//         state.error = null;
+//       })
+//       .addCase(courseForm.fulfilled, (state) => {
+//         state.loading = false;
+//       })
+//       .addCase(courseForm.rejected, (state, action) => {
+//         state.loading = false;
+//         state.error = action.error.message || "Failed to post car data";
+//       });
+//   },
+// });
+
+// export default courseFormSlice.reducer;
+
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "@/lib/axiosInstance";
 import { AxiosError } from "axios";
-import { userData } from "@/types/types";
+import { userData } from "@/types/types"; // Make sure the 'userData' type is correctly defined
 
-export const carData = createAsyncThunk("carData/post", async (userData) => {
-  try {
-    const response = await axiosInstance.post("userData", userData);
-    console.log(
-      "this is response on slice post user data data =========> ",
-      response.data
-    );
+// Define the type of the userData parameter for createAsyncThunk
+export const courseForm = createAsyncThunk(
+  "courseForm/post",
+  async (userData: userData) => {
+    // Using the 'userData' type here
+    try {
+      const response = await axiosInstance.post("/api/userData", userData);
+      console.log(
+        "This is response on slice post user data data =========> ",
+        response.data
+      );
 
-    return response.data;
-  } catch (error) {
-    const errorAxios = error as AxiosError;
-    const errorMessage =
-      (errorAxios.response?.data as { message?: string })?.message ||
-      "Something went wrong!";
-    throw new Error(errorMessage);
+      return response.data;
+    } catch (error) {
+      const errorAxios = error as AxiosError;
+      const errorMessage =
+        (errorAxios.response?.data as { message?: string })?.message ||
+        "Something went wrong!";
+      throw new Error(errorMessage);
+    }
   }
-});
+);
 
-interface carDataState {
-  userData: userData[];
+interface courseFormState {
+  userData: userData[]; // Array of 'userData' type
   loading: boolean;
   error: string | null;
 }
 
-const initialState: carDataState = {
+const initialState: courseFormState = {
   userData: [],
   loading: false,
   error: null,
 };
 
-const carDataSlice = createSlice({
-  name: "car",
+const courseFormSlice = createSlice({
+  name: "courseForm",
   initialState,
   reducers: {},
   extraReducers(builder) {
     builder
-      .addCase(carData.pending, (state) => {
+      .addCase(courseForm.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(carData.fulfilled, (state) => {
+      .addCase(courseForm.fulfilled, (state, action) => {
         state.loading = false;
+        state.userData.push(action.payload); // Add the user data to state
       })
-      .addCase(carData.rejected, (state, action) => {
+      .addCase(courseForm.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message || "Failed to post car data";
+        state.error = action.error.message || "Failed to post course data";
       });
   },
 });
 
-export default carDataSlice.reducer;
+export default courseFormSlice.reducer;
