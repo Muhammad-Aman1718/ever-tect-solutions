@@ -5,6 +5,9 @@ const useApplyCourse = () => {
   const searchParams = useSearchParams();
   const selectedCourse = searchParams.get("course");
   const [course, setCourse] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [fatherName, setFatherName] = useState("");
+  
 
   useEffect(() => {
     if (selectedCourse) {
@@ -12,7 +15,7 @@ const useApplyCourse = () => {
     }
   }, [selectedCourse]);
 
-  return {course, setCourse};
+  return { course, setCourse };
 };
 
 export default useApplyCourse;
