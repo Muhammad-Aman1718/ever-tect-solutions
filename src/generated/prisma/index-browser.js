@@ -119,6 +119,8 @@ exports.Prisma.CourseFormScalarFieldEnum = {
   fatherName: 'fatherName',
   email: 'email',
   phoneNumber: 'phoneNumber',
+  city: 'city',
+  province: 'province',
   education: 'education',
   course: 'course',
   message: 'message',

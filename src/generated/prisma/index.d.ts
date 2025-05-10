@@ -839,6 +839,8 @@ export namespace Prisma {
     fatherName: string | null
     email: string | null
     phoneNumber: string | null
+    city: string | null
+    province: string | null
     education: string | null
     course: string | null
     message: string | null
@@ -852,6 +854,8 @@ export namespace Prisma {
     fatherName: string | null
     email: string | null
     phoneNumber: string | null
+    city: string | null
+    province: string | null
     education: string | null
     course: string | null
     message: string | null
@@ -865,6 +869,8 @@ export namespace Prisma {
     fatherName: number
     email: number
     phoneNumber: number
+    city: number
+    province: number
     education: number
     course: number
     message: number
@@ -880,6 +886,8 @@ export namespace Prisma {
     fatherName?: true
     email?: true
     phoneNumber?: true
+    city?: true
+    province?: true
     education?: true
     course?: true
     message?: true
@@ -893,6 +901,8 @@ export namespace Prisma {
     fatherName?: true
     email?: true
     phoneNumber?: true
+    city?: true
+    province?: true
     education?: true
     course?: true
     message?: true
@@ -906,6 +916,8 @@ export namespace Prisma {
     fatherName?: true
     email?: true
     phoneNumber?: true
+    city?: true
+    province?: true
     education?: true
     course?: true
     message?: true
@@ -992,6 +1004,8 @@ export namespace Prisma {
     fatherName: string
     email: string
     phoneNumber: string
+    city: string
+    province: string
     education: string
     course: string
     message: string
@@ -1022,6 +1036,8 @@ export namespace Prisma {
     fatherName?: boolean
     email?: boolean
     phoneNumber?: boolean
+    city?: boolean
+    province?: boolean
     education?: boolean
     course?: boolean
     message?: boolean
@@ -1037,6 +1053,8 @@ export namespace Prisma {
     fatherName?: boolean
     email?: boolean
     phoneNumber?: boolean
+    city?: boolean
+    province?: boolean
     education?: boolean
     course?: boolean
     message?: boolean
@@ -1044,7 +1062,7 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type CourseFormOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "fullName" | "fatherName" | "email" | "phoneNumber" | "education" | "course" | "message" | "createdAt" | "updatedAt", ExtArgs["result"]["courseForm"]>
+  export type CourseFormOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "fullName" | "fatherName" | "email" | "phoneNumber" | "city" | "province" | "education" | "course" | "message" | "createdAt" | "updatedAt", ExtArgs["result"]["courseForm"]>
 
   export type $CourseFormPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "CourseForm"
@@ -1055,6 +1073,8 @@ export namespace Prisma {
       fatherName: string
       email: string
       phoneNumber: string
+      city: string
+      province: string
       education: string
       course: string
       message: string
@@ -1457,6 +1477,8 @@ export namespace Prisma {
     readonly fatherName: FieldRef<"CourseForm", 'String'>
     readonly email: FieldRef<"CourseForm", 'String'>
     readonly phoneNumber: FieldRef<"CourseForm", 'String'>
+    readonly city: FieldRef<"CourseForm", 'String'>
+    readonly province: FieldRef<"CourseForm", 'String'>
     readonly education: FieldRef<"CourseForm", 'String'>
     readonly course: FieldRef<"CourseForm", 'String'>
     readonly message: FieldRef<"CourseForm", 'String'>
@@ -1820,6 +1842,8 @@ export namespace Prisma {
     fatherName: 'fatherName',
     email: 'email',
     phoneNumber: 'phoneNumber',
+    city: 'city',
+    province: 'province',
     education: 'education',
     course: 'course',
     message: 'message',
@@ -1905,6 +1929,8 @@ export namespace Prisma {
     fatherName?: StringFilter<"CourseForm"> | string
     email?: StringFilter<"CourseForm"> | string
     phoneNumber?: StringFilter<"CourseForm"> | string
+    city?: StringFilter<"CourseForm"> | string
+    province?: StringFilter<"CourseForm"> | string
     education?: StringFilter<"CourseForm"> | string
     course?: StringFilter<"CourseForm"> | string
     message?: StringFilter<"CourseForm"> | string
@@ -1918,6 +1944,8 @@ export namespace Prisma {
     fatherName?: SortOrder
     email?: SortOrder
     phoneNumber?: SortOrder
+    city?: SortOrder
+    province?: SortOrder
     education?: SortOrder
     course?: SortOrder
     message?: SortOrder
@@ -1934,6 +1962,8 @@ export namespace Prisma {
     fullName?: StringFilter<"CourseForm"> | string
     fatherName?: StringFilter<"CourseForm"> | string
     phoneNumber?: StringFilter<"CourseForm"> | string
+    city?: StringFilter<"CourseForm"> | string
+    province?: StringFilter<"CourseForm"> | string
     education?: StringFilter<"CourseForm"> | string
     course?: StringFilter<"CourseForm"> | string
     message?: StringFilter<"CourseForm"> | string
@@ -1947,6 +1977,8 @@ export namespace Prisma {
     fatherName?: SortOrder
     email?: SortOrder
     phoneNumber?: SortOrder
+    city?: SortOrder
+    province?: SortOrder
     education?: SortOrder
     course?: SortOrder
     message?: SortOrder
@@ -1966,6 +1998,8 @@ export namespace Prisma {
     fatherName?: StringWithAggregatesFilter<"CourseForm"> | string
     email?: StringWithAggregatesFilter<"CourseForm"> | string
     phoneNumber?: StringWithAggregatesFilter<"CourseForm"> | string
+    city?: StringWithAggregatesFilter<"CourseForm"> | string
+    province?: StringWithAggregatesFilter<"CourseForm"> | string
     education?: StringWithAggregatesFilter<"CourseForm"> | string
     course?: StringWithAggregatesFilter<"CourseForm"> | string
     message?: StringWithAggregatesFilter<"CourseForm"> | string
@@ -1979,6 +2013,8 @@ export namespace Prisma {
     fatherName: string
     email: string
     phoneNumber: string
+    city: string
+    province: string
     education: string
     course: string
     message: string
@@ -1992,6 +2028,8 @@ export namespace Prisma {
     fatherName: string
     email: string
     phoneNumber: string
+    city: string
+    province: string
     education: string
     course: string
     message: string
@@ -2004,6 +2042,8 @@ export namespace Prisma {
     fatherName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phoneNumber?: StringFieldUpdateOperationsInput | string
+    city?: StringFieldUpdateOperationsInput | string
+    province?: StringFieldUpdateOperationsInput | string
     education?: StringFieldUpdateOperationsInput | string
     course?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
@@ -2016,6 +2056,8 @@ export namespace Prisma {
     fatherName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phoneNumber?: StringFieldUpdateOperationsInput | string
+    city?: StringFieldUpdateOperationsInput | string
+    province?: StringFieldUpdateOperationsInput | string
     education?: StringFieldUpdateOperationsInput | string
     course?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
@@ -2029,6 +2071,8 @@ export namespace Prisma {
     fatherName: string
     email: string
     phoneNumber: string
+    city: string
+    province: string
     education: string
     course: string
     message: string
@@ -2041,6 +2085,8 @@ export namespace Prisma {
     fatherName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phoneNumber?: StringFieldUpdateOperationsInput | string
+    city?: StringFieldUpdateOperationsInput | string
+    province?: StringFieldUpdateOperationsInput | string
     education?: StringFieldUpdateOperationsInput | string
     course?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
@@ -2053,6 +2099,8 @@ export namespace Prisma {
     fatherName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     phoneNumber?: StringFieldUpdateOperationsInput | string
+    city?: StringFieldUpdateOperationsInput | string
+    province?: StringFieldUpdateOperationsInput | string
     education?: StringFieldUpdateOperationsInput | string
     course?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
@@ -2092,6 +2140,8 @@ export namespace Prisma {
     fatherName?: SortOrder
     email?: SortOrder
     phoneNumber?: SortOrder
+    city?: SortOrder
+    province?: SortOrder
     education?: SortOrder
     course?: SortOrder
     message?: SortOrder
@@ -2105,6 +2155,8 @@ export namespace Prisma {
     fatherName?: SortOrder
     email?: SortOrder
     phoneNumber?: SortOrder
+    city?: SortOrder
+    province?: SortOrder
     education?: SortOrder
     course?: SortOrder
     message?: SortOrder
@@ -2118,6 +2170,8 @@ export namespace Prisma {
     fatherName?: SortOrder
     email?: SortOrder
     phoneNumber?: SortOrder
+    city?: SortOrder
+    province?: SortOrder
     education?: SortOrder
     course?: SortOrder
     message?: SortOrder

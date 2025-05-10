@@ -4,6 +4,8 @@ import InputField from "@/components/inputs/InputField";
 import MainContainer from "@/components/MainContainer";
 import useApplyCourse from "@/hooks/useApplyCourse";
 import { courseOptions, educationOptions } from "@/constant/data";
+import Loader from "@/components/Loader";
+import { cities, provinces } from "@/types/types";
 
 const Form = () => {
   const {
@@ -15,12 +17,17 @@ const Form = () => {
     setEmail,
     phoneNumber,
     setPhoneNumber,
+    city,
+    setCity,
+    province,
+    setProvince,
     education,
     setEducation,
     course,
     setCourse,
     message,
     setMessage,
+    loading,
     handleSubmit,
   } = useApplyCourse();
 
@@ -62,6 +69,38 @@ const Form = () => {
             labelClassName="font-bold"
             placeholder="+92 (300) 1234567"
           />
+          <InputField
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            label="City"
+            labelClassName="font-bold"
+            placeholder="Enter your city name"
+          />
+
+          <div>
+            <label className="block mb-1 text-gray-700  font-bold">
+              Province
+            </label>
+            <select
+              value={province}
+              onChange={(e) => setProvince(e.target.value)}
+              name="province"
+              required
+              className="w-full border border-gray-300 rounded-md text-[#504f4f] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition"
+            >
+              <option value="" hidden>
+                -- Select your Province --
+              </option>
+              {provinces.map((level, idx) => (
+                <option key={idx} value={level}>
+                  {level}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/*  */}
+
           <div>
             <label className="block mb-1 text-gray-700  font-bold">
               Education Level
@@ -119,9 +158,9 @@ const Form = () => {
         </div>
         <button
           onClick={handleSubmit}
-          className="bg-[#2A75BB] text-white font-semibold rounded-xl py-3 px-6 mt-10 transition-colors duration-300 ease-in-out hover:bg-[#1e5a93] cursor-pointer "
+          className="bg-[#2A75BB] text-white w-[134px] font-semibold rounded-xl py-3 px-6 mt-10 transition-colors duration-300 ease-in-out hover:bg-[#1e5a93] cursor-pointer "
         >
-          Apply Now
+          {loading ? <Loader /> : "Apply Now"}
         </button>
       </MainContainer>
     </div>

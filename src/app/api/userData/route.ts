@@ -11,6 +11,8 @@ export const POST = async (req: NextRequest) => {
       fatherName,
       email,
       phoneNumber,
+      city,
+      province,
       education,
       course,
       message,
@@ -18,13 +20,13 @@ export const POST = async (req: NextRequest) => {
 
     console.log("this is user data body ===========>", body);
 
-    const checkDuplicateData = await prisma.courseForm.findMany({});
-
     if (
       !fullName ||
       !fatherName ||
       !email ||
       !phoneNumber ||
+      !city ||
+      !province ||
       !education ||
       !course ||
       !message
@@ -44,13 +46,16 @@ export const POST = async (req: NextRequest) => {
       },
     });
 
+    console.log(existingUser , "this is exsiting user ");
+    
+
     if (existingUser) {
       return NextResponse.json(
         {
           success: false,
           message: "A user with this email has already submitted the form",
         },
-        { status: 400 }
+        { status: 500 }
       );
     }
 

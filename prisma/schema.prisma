@@ -20,6 +20,8 @@ model CourseForm {
   fatherName  String
   email       String   @unique
   phoneNumber String
+  city        String
+  province    String
   education   String
   course      String
   message     String
