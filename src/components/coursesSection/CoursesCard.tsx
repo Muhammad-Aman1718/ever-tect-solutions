@@ -1,6 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import WebDevelopmentCoursesImg from "../../../public/assets/courses/web-dev.jpeg";
+import Link from "next/link";
 
 interface CoursesCardPropsTypes {
   cardImg?: string | StaticImageData;
@@ -36,7 +37,14 @@ const CoursesCard: React.FC<CoursesCardPropsTypes> = ({
             View Details
           </button>
           <button className="flex-1 bg-[#2A75BB] text-white py-2 rounded-xl hover:bg-[#225f99] transition hover:cursor-pointer ">
-            Apply Now
+            {/* <Link href="/applyCourse/form">Apply Now</Link> */}
+            <Link
+              href={`/applyCourse/form?course=${encodeURIComponent(
+                courseHeading ?? ""
+              )}`}
+            >
+              Apply Now
+            </Link>
           </button>
         </div>
       </div>

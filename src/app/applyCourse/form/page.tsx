@@ -1,9 +1,21 @@
 "use client";
+import React from "react";
 import InputField from "@/components/inputs/InputField";
 import MainContainer from "@/components/MainContainer";
-import React from "react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Form = () => {
+  const searchParams = useSearchParams();
+  const selectedCourse = searchParams.get("course");
+  const [course, setCourse] = useState("");
+
+  useEffect(() => {
+    if (selectedCourse) {
+      setCourse(selectedCourse);
+    }
+  }, [selectedCourse]);
+
   const courseOptions = [
     "Web Development (MERN Stack)",
     "Graphic Designing Pro",
@@ -62,7 +74,6 @@ const Form = () => {
               name="education"
               required
               className="w-full border border-gray-300 rounded-md text-[#504f4f] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition"
-              // onChange={handleChange}
             >
               <option value="" hidden>
                 -- Select Education Level --
@@ -83,7 +94,8 @@ const Form = () => {
               name="course"
               required
               className="w-full border border-gray-300 rounded-md text-[#504f4f] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition"
-              // onChange={handleChange}
+              value={course}
+              onChange={(e) => setCourse(e.target.value)}
             >
               <option value="" hidden>
                 -- Choose a course --
