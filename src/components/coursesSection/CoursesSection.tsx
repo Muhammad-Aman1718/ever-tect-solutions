@@ -1,119 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import CoursesCard from "./CoursesCard";
 import { motion } from "framer-motion";
-
-const allCourses = [
-  {
-    courseHeading: "Web Development (Mern Stack)",
-    coursePoints: [
-      "Html5 / Css3",
-      "Bootstrap / Tailwind",
-      "Javascript",
-      "React.js",
-      "Node.js",
-    ],
-  },
-  {
-    courseHeading: "Graphic Designing Pro",
-    coursePoints: [
-      "Canva Pro",
-      "Adobe Products Family",
-      "Coral Draw",
-      "Filmora (UI/UX)",
-      "AI Video Creations Tools Creations",
-    ],
-  },
-  {
-    courseHeading: "Digital Marketing Pro",
-    coursePoints: [
-      "Graphics Designing",
-      "Social Media Marketing",
-      "Web Development (Wordpress/Shoppify)",
-      "SEO (Search Engine Optimization)",
-      "E-Commerce Store",
-    ],
-  },
-  {
-    courseHeading: "E-Commerce",
-    coursePoints: [
-      "Shoppify",
-      "eBay",
-      "Meta Platform (Facebook/Instagram)",
-      "Social Media Marketing",
-      "Product Hunting and listing",
-    ],
-  },
-  {
-    courseHeading: "Mobile App Development",
-    coursePoints: [
-      "Android based App Development",
-      "XML (Front-End)",
-      "UI/UX",
-      "Firebase Database",
-      "Internship",
-    ],
-  },
-  {
-    courseHeading: "Python Programming",
-    coursePoints: [
-      "Basic Programming",
-      "Object Oriented Programming (OOP)",
-      "Data Analytics",
-      "Python Libraries",
-      "Machine Learning Concepts",
-    ],
-  },
-  {
-    courseHeading: "Digital Business Booster",
-    coursePoints: [
-      "Graphics Designing",
-      "Social Media Marketing",
-      "Web Development (Wordpress/Shoppify)",
-      "SEO (Search Engine Optimization)",
-      "E-Commerce Store",
-    ],
-  },
-  {
-    courseHeading: "AI Media Production",
-    coursePoints: [
-      "Video and Audio ads Creation",
-      "Educational Contents",
-      "Apps Designing",
-      "Web Designing",
-      "E-Commerce Store",
-    ],
-  },
-  {
-    courseHeading: "Wordpress Web Development",
-    coursePoints: [
-      "Front-End Designing",
-      "Backend Query Processing",
-      "E-Commerce Store",
-      "Customized Websites",
-      "User Friendly Interface",
-    ],
-  },
-];
+import { allCourses } from "@/constant/data";
+import useCourseSection from "@/hooks/useCourseSection";
 
 const CoursesSection = () => {
-  const [visibleCount, setVisibleCount] = useState(3);
-
-  const handleToggle = () => {
-    setVisibleCount((prev) => (prev >= allCourses.length ? 3 : prev + 3));
-  };
-
-  const visibleCourses = allCourses.slice(0, visibleCount);
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4, delay: i * 0.1 },
-    }),
-  };
+  const { visibleCount, visibleCourses, cardVariants, handleToggle } =
+    useCourseSection();
 
   return (
     <div>

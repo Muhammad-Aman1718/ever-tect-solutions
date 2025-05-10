@@ -2,40 +2,12 @@
 import React from "react";
 import InputField from "@/components/inputs/InputField";
 import MainContainer from "@/components/MainContainer";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import useApplyCourse from "@/hooks/useApplyCourse";
+import { courseOptions, educationOptions } from "@/constant/data";
 
 const Form = () => {
-  const searchParams = useSearchParams();
-  const selectedCourse = searchParams.get("course");
-  const [course, setCourse] = useState("");
+  const { course, setCourse } = useApplyCourse();
 
-  useEffect(() => {
-    if (selectedCourse) {
-      setCourse(selectedCourse);
-    }
-  }, [selectedCourse]);
-
-  const courseOptions = [
-    "Web Development (MERN Stack)",
-    "Graphic Designing Pro",
-    "Digital Marketing Pro",
-    "E-Commerce",
-    "Mobile App Development",
-    "Python Programming",
-    "Digital Business Booster",
-    "AI Media Production",
-    "WordPress Web Development",
-  ];
-  const educationOptions = [
-    "Middle School (Grade 8)",
-    "Matriculation (Grade 10)",
-    "Intermediate / FA / FSC / ICS",
-    "Bachelor’s (BA / BSc / BCom / BS)",
-    "Master’s (MA / MSc / MCom / MS)",
-    "Diploma / Certificate Course",
-    "Other",
-  ];
   return (
     <div>
       <MainContainer>

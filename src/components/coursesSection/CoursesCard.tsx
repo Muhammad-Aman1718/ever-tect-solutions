@@ -37,7 +37,6 @@ const CoursesCard: React.FC<CoursesCardPropsTypes> = ({
             View Details
           </button>
           <button className="flex-1 bg-[#2A75BB] text-white py-2 rounded-xl hover:bg-[#225f99] transition hover:cursor-pointer ">
-            {/* <Link href="/applyCourse/form">Apply Now</Link> */}
             <Link
               href={`/applyCourse/form?course=${encodeURIComponent(
                 courseHeading ?? ""
