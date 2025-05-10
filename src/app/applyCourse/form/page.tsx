@@ -5,7 +5,7 @@ import MainContainer from "@/components/MainContainer";
 import useApplyCourse from "@/hooks/useApplyCourse";
 import { courseOptions, educationOptions } from "@/constant/data";
 import Loader from "@/components/Loader";
-import { cities, provinces } from "@/types/types";
+import { provinces } from "@/types/types";
 
 const Form = () => {
   const {

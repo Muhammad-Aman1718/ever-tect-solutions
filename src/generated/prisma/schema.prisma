@@ -14,7 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model CourseForm {
+model UserFormData {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   fullName    String
   fatherName  String

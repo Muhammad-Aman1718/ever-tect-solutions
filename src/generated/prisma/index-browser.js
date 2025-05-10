@@ -113,7 +113,7 @@ Prisma.NullTypes = {
  * Enums
  */
 
-exports.Prisma.CourseFormScalarFieldEnum = {
+exports.Prisma.UserFormDataScalarFieldEnum = {
   id: 'id',
   fullName: 'fullName',
   fatherName: 'fatherName',
@@ -140,7 +140,7 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  CourseForm: 'CourseForm'
+  UserFormData: 'UserFormData'
 };
 
 /**

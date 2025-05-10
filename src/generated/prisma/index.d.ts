@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model CourseForm
+ * Model UserFormData
  * 
  */
-export type CourseForm = $Result.DefaultSelection<Prisma.$CourseFormPayload>
+export type UserFormData = $Result.DefaultSelection<Prisma.$UserFormDataPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type CourseForm = $Result.DefaultSelection<Prisma.$CourseFormPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more CourseForms
- * const courseForms = await prisma.courseForm.findMany()
+ * // Fetch zero or more UserFormData
+ * const userFormData = await prisma.userFormData.findMany()
  * ```
  *
  *
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more CourseForms
-   * const courseForms = await prisma.courseForm.findMany()
+   * // Fetch zero or more UserFormData
+   * const userFormData = await prisma.userFormData.findMany()
    * ```
    *
    *
@@ -112,14 +112,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.courseForm`: Exposes CRUD operations for the **CourseForm** model.
+   * `prisma.userFormData`: Exposes CRUD operations for the **UserFormData** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more CourseForms
-    * const courseForms = await prisma.courseForm.findMany()
+    * // Fetch zero or more UserFormData
+    * const userFormData = await prisma.userFormData.findMany()
     * ```
     */
-  get courseForm(): Prisma.CourseFormDelegate<ExtArgs, ClientOptions>;
+  get userFormData(): Prisma.UserFormDataDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -560,7 +560,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    CourseForm: 'CourseForm'
+    UserFormData: 'UserFormData'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -579,81 +579,81 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "courseForm"
+      modelProps: "userFormData"
       txIsolationLevel: never
     }
     model: {
-      CourseForm: {
-        payload: Prisma.$CourseFormPayload<ExtArgs>
-        fields: Prisma.CourseFormFieldRefs
+      UserFormData: {
+        payload: Prisma.$UserFormDataPayload<ExtArgs>
+        fields: Prisma.UserFormDataFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.CourseFormFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CourseFormPayload> | null
+            args: Prisma.UserFormDataFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFormDataPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.CourseFormFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CourseFormPayload>
+            args: Prisma.UserFormDataFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFormDataPayload>
           }
           findFirst: {
-            args: Prisma.CourseFormFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CourseFormPayload> | null
+            args: Prisma.UserFormDataFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFormDataPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.CourseFormFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CourseFormPayload>
+            args: Prisma.UserFormDataFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFormDataPayload>
           }
           findMany: {
-            args: Prisma.CourseFormFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CourseFormPayload>[]
+            args: Prisma.UserFormDataFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFormDataPayload>[]
           }
           create: {
-            args: Prisma.CourseFormCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CourseFormPayload>
+            args: Prisma.UserFormDataCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFormDataPayload>
           }
           createMany: {
-            args: Prisma.CourseFormCreateManyArgs<ExtArgs>
+            args: Prisma.UserFormDataCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           delete: {
-            args: Prisma.CourseFormDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CourseFormPayload>
+            args: Prisma.UserFormDataDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFormDataPayload>
           }
           update: {
-            args: Prisma.CourseFormUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CourseFormPayload>
+            args: Prisma.UserFormDataUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFormDataPayload>
           }
           deleteMany: {
-            args: Prisma.CourseFormDeleteManyArgs<ExtArgs>
+            args: Prisma.UserFormDataDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.CourseFormUpdateManyArgs<ExtArgs>
+            args: Prisma.UserFormDataUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           upsert: {
-            args: Prisma.CourseFormUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CourseFormPayload>
+            args: Prisma.UserFormDataUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFormDataPayload>
           }
           aggregate: {
-            args: Prisma.CourseFormAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateCourseForm>
+            args: Prisma.UserFormDataAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserFormData>
           }
           groupBy: {
-            args: Prisma.CourseFormGroupByArgs<ExtArgs>
-            result: $Utils.Optional<CourseFormGroupByOutputType>[]
+            args: Prisma.UserFormDataGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserFormDataGroupByOutputType>[]
           }
           findRaw: {
-            args: Prisma.CourseFormFindRawArgs<ExtArgs>
+            args: Prisma.UserFormDataFindRawArgs<ExtArgs>
             result: JsonObject
           }
           aggregateRaw: {
-            args: Prisma.CourseFormAggregateRawArgs<ExtArgs>
+            args: Prisma.UserFormDataAggregateRawArgs<ExtArgs>
             result: JsonObject
           }
           count: {
-            args: Prisma.CourseFormCountArgs<ExtArgs>
-            result: $Utils.Optional<CourseFormCountAggregateOutputType> | number
+            args: Prisma.UserFormDataCountArgs<ExtArgs>
+            result: $Utils.Optional<UserFormDataCountAggregateOutputType> | number
           }
         }
       }
@@ -728,7 +728,7 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    courseForm?: CourseFormOmit
+    userFormData?: UserFormDataOmit
   }
 
   /* Types for Logging */
@@ -824,16 +824,16 @@ export namespace Prisma {
    */
 
   /**
-   * Model CourseForm
+   * Model UserFormData
    */
 
-  export type AggregateCourseForm = {
-    _count: CourseFormCountAggregateOutputType | null
-    _min: CourseFormMinAggregateOutputType | null
-    _max: CourseFormMaxAggregateOutputType | null
+  export type AggregateUserFormData = {
+    _count: UserFormDataCountAggregateOutputType | null
+    _min: UserFormDataMinAggregateOutputType | null
+    _max: UserFormDataMaxAggregateOutputType | null
   }
 
-  export type CourseFormMinAggregateOutputType = {
+  export type UserFormDataMinAggregateOutputType = {
     id: string | null
     fullName: string | null
     fatherName: string | null
@@ -848,7 +848,7 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type CourseFormMaxAggregateOutputType = {
+  export type UserFormDataMaxAggregateOutputType = {
     id: string | null
     fullName: string | null
     fatherName: string | null
@@ -863,7 +863,7 @@ export namespace Prisma {
     updatedAt: Date | null
   }
 
-  export type CourseFormCountAggregateOutputType = {
+  export type UserFormDataCountAggregateOutputType = {
     id: number
     fullName: number
     fatherName: number
@@ -880,7 +880,7 @@ export namespace Prisma {
   }
 
 
-  export type CourseFormMinAggregateInputType = {
+  export type UserFormDataMinAggregateInputType = {
     id?: true
     fullName?: true
     fatherName?: true
@@ -895,7 +895,7 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type CourseFormMaxAggregateInputType = {
+  export type UserFormDataMaxAggregateInputType = {
     id?: true
     fullName?: true
     fatherName?: true
@@ -910,7 +910,7 @@ export namespace Prisma {
     updatedAt?: true
   }
 
-  export type CourseFormCountAggregateInputType = {
+  export type UserFormDataCountAggregateInputType = {
     id?: true
     fullName?: true
     fatherName?: true
@@ -926,79 +926,79 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type CourseFormAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which CourseForm to aggregate.
+     * Filter which UserFormData to aggregate.
      */
-    where?: CourseFormWhereInput
+    where?: UserFormDataWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of CourseForms to fetch.
+     * Determine the order of UserFormData to fetch.
      */
-    orderBy?: CourseFormOrderByWithRelationInput | CourseFormOrderByWithRelationInput[]
+    orderBy?: UserFormDataOrderByWithRelationInput | UserFormDataOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: CourseFormWhereUniqueInput
+    cursor?: UserFormDataWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` CourseForms from the position of the cursor.
+     * Take `±n` UserFormData from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` CourseForms.
+     * Skip the first `n` UserFormData.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned CourseForms
+     * Count returned UserFormData
     **/
-    _count?: true | CourseFormCountAggregateInputType
+    _count?: true | UserFormDataCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: CourseFormMinAggregateInputType
+    _min?: UserFormDataMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: CourseFormMaxAggregateInputType
+    _max?: UserFormDataMaxAggregateInputType
   }
 
-  export type GetCourseFormAggregateType<T extends CourseFormAggregateArgs> = {
-        [P in keyof T & keyof AggregateCourseForm]: P extends '_count' | 'count'
+  export type GetUserFormDataAggregateType<T extends UserFormDataAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserFormData]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateCourseForm[P]>
-      : GetScalarType<T[P], AggregateCourseForm[P]>
+        : GetScalarType<T[P], AggregateUserFormData[P]>
+      : GetScalarType<T[P], AggregateUserFormData[P]>
   }
 
 
 
 
-  export type CourseFormGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: CourseFormWhereInput
-    orderBy?: CourseFormOrderByWithAggregationInput | CourseFormOrderByWithAggregationInput[]
-    by: CourseFormScalarFieldEnum[] | CourseFormScalarFieldEnum
-    having?: CourseFormScalarWhereWithAggregatesInput
+  export type UserFormDataGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserFormDataWhereInput
+    orderBy?: UserFormDataOrderByWithAggregationInput | UserFormDataOrderByWithAggregationInput[]
+    by: UserFormDataScalarFieldEnum[] | UserFormDataScalarFieldEnum
+    having?: UserFormDataScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: CourseFormCountAggregateInputType | true
-    _min?: CourseFormMinAggregateInputType
-    _max?: CourseFormMaxAggregateInputType
+    _count?: UserFormDataCountAggregateInputType | true
+    _min?: UserFormDataMinAggregateInputType
+    _max?: UserFormDataMaxAggregateInputType
   }
 
-  export type CourseFormGroupByOutputType = {
+  export type UserFormDataGroupByOutputType = {
     id: string
     fullName: string
     fatherName: string
@@ -1011,26 +1011,26 @@ export namespace Prisma {
     message: string
     createdAt: Date
     updatedAt: Date
-    _count: CourseFormCountAggregateOutputType | null
-    _min: CourseFormMinAggregateOutputType | null
-    _max: CourseFormMaxAggregateOutputType | null
+    _count: UserFormDataCountAggregateOutputType | null
+    _min: UserFormDataMinAggregateOutputType | null
+    _max: UserFormDataMaxAggregateOutputType | null
   }
 
-  type GetCourseFormGroupByPayload<T extends CourseFormGroupByArgs> = Prisma.PrismaPromise<
+  type GetUserFormDataGroupByPayload<T extends UserFormDataGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<CourseFormGroupByOutputType, T['by']> &
+      PickEnumerable<UserFormDataGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof CourseFormGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof UserFormDataGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], CourseFormGroupByOutputType[P]>
-            : GetScalarType<T[P], CourseFormGroupByOutputType[P]>
+              : GetScalarType<T[P], UserFormDataGroupByOutputType[P]>
+            : GetScalarType<T[P], UserFormDataGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type CourseFormSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserFormDataSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     fullName?: boolean
     fatherName?: boolean
@@ -1043,11 +1043,11 @@ export namespace Prisma {
     message?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-  }, ExtArgs["result"]["courseForm"]>
+  }, ExtArgs["result"]["userFormData"]>
 
 
 
-  export type CourseFormSelectScalar = {
+  export type UserFormDataSelectScalar = {
     id?: boolean
     fullName?: boolean
     fatherName?: boolean
@@ -1062,10 +1062,10 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type CourseFormOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "fullName" | "fatherName" | "email" | "phoneNumber" | "city" | "province" | "education" | "course" | "message" | "createdAt" | "updatedAt", ExtArgs["result"]["courseForm"]>
+  export type UserFormDataOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "fullName" | "fatherName" | "email" | "phoneNumber" | "city" | "province" | "education" | "course" | "message" | "createdAt" | "updatedAt", ExtArgs["result"]["userFormData"]>
 
-  export type $CourseFormPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "CourseForm"
+  export type $UserFormDataPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserFormData"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -1080,143 +1080,143 @@ export namespace Prisma {
       message: string
       createdAt: Date
       updatedAt: Date
-    }, ExtArgs["result"]["courseForm"]>
+    }, ExtArgs["result"]["userFormData"]>
     composites: {}
   }
 
-  type CourseFormGetPayload<S extends boolean | null | undefined | CourseFormDefaultArgs> = $Result.GetResult<Prisma.$CourseFormPayload, S>
+  type UserFormDataGetPayload<S extends boolean | null | undefined | UserFormDataDefaultArgs> = $Result.GetResult<Prisma.$UserFormDataPayload, S>
 
-  type CourseFormCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<CourseFormFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: CourseFormCountAggregateInputType | true
+  type UserFormDataCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserFormDataFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserFormDataCountAggregateInputType | true
     }
 
-  export interface CourseFormDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['CourseForm'], meta: { name: 'CourseForm' } }
+  export interface UserFormDataDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserFormData'], meta: { name: 'UserFormData' } }
     /**
-     * Find zero or one CourseForm that matches the filter.
-     * @param {CourseFormFindUniqueArgs} args - Arguments to find a CourseForm
+     * Find zero or one UserFormData that matches the filter.
+     * @param {UserFormDataFindUniqueArgs} args - Arguments to find a UserFormData
      * @example
-     * // Get one CourseForm
-     * const courseForm = await prisma.courseForm.findUnique({
+     * // Get one UserFormData
+     * const userFormData = await prisma.userFormData.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends CourseFormFindUniqueArgs>(args: SelectSubset<T, CourseFormFindUniqueArgs<ExtArgs>>): Prisma__CourseFormClient<$Result.GetResult<Prisma.$CourseFormPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends UserFormDataFindUniqueArgs>(args: SelectSubset<T, UserFormDataFindUniqueArgs<ExtArgs>>): Prisma__UserFormDataClient<$Result.GetResult<Prisma.$UserFormDataPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one CourseForm that matches the filter or throw an error with `error.code='P2025'`
+     * Find one UserFormData that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {CourseFormFindUniqueOrThrowArgs} args - Arguments to find a CourseForm
+     * @param {UserFormDataFindUniqueOrThrowArgs} args - Arguments to find a UserFormData
      * @example
-     * // Get one CourseForm
-     * const courseForm = await prisma.courseForm.findUniqueOrThrow({
+     * // Get one UserFormData
+     * const userFormData = await prisma.userFormData.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends CourseFormFindUniqueOrThrowArgs>(args: SelectSubset<T, CourseFormFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CourseFormClient<$Result.GetResult<Prisma.$CourseFormPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends UserFormDataFindUniqueOrThrowArgs>(args: SelectSubset<T, UserFormDataFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserFormDataClient<$Result.GetResult<Prisma.$UserFormDataPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first CourseForm that matches the filter.
+     * Find the first UserFormData that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CourseFormFindFirstArgs} args - Arguments to find a CourseForm
+     * @param {UserFormDataFindFirstArgs} args - Arguments to find a UserFormData
      * @example
-     * // Get one CourseForm
-     * const courseForm = await prisma.courseForm.findFirst({
+     * // Get one UserFormData
+     * const userFormData = await prisma.userFormData.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends CourseFormFindFirstArgs>(args?: SelectSubset<T, CourseFormFindFirstArgs<ExtArgs>>): Prisma__CourseFormClient<$Result.GetResult<Prisma.$CourseFormPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends UserFormDataFindFirstArgs>(args?: SelectSubset<T, UserFormDataFindFirstArgs<ExtArgs>>): Prisma__UserFormDataClient<$Result.GetResult<Prisma.$UserFormDataPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first CourseForm that matches the filter or
+     * Find the first UserFormData that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CourseFormFindFirstOrThrowArgs} args - Arguments to find a CourseForm
+     * @param {UserFormDataFindFirstOrThrowArgs} args - Arguments to find a UserFormData
      * @example
-     * // Get one CourseForm
-     * const courseForm = await prisma.courseForm.findFirstOrThrow({
+     * // Get one UserFormData
+     * const userFormData = await prisma.userFormData.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends CourseFormFindFirstOrThrowArgs>(args?: SelectSubset<T, CourseFormFindFirstOrThrowArgs<ExtArgs>>): Prisma__CourseFormClient<$Result.GetResult<Prisma.$CourseFormPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends UserFormDataFindFirstOrThrowArgs>(args?: SelectSubset<T, UserFormDataFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserFormDataClient<$Result.GetResult<Prisma.$UserFormDataPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more CourseForms that matches the filter.
+     * Find zero or more UserFormData that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CourseFormFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {UserFormDataFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all CourseForms
-     * const courseForms = await prisma.courseForm.findMany()
+     * // Get all UserFormData
+     * const userFormData = await prisma.userFormData.findMany()
      * 
-     * // Get first 10 CourseForms
-     * const courseForms = await prisma.courseForm.findMany({ take: 10 })
+     * // Get first 10 UserFormData
+     * const userFormData = await prisma.userFormData.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const courseFormWithIdOnly = await prisma.courseForm.findMany({ select: { id: true } })
+     * const userFormDataWithIdOnly = await prisma.userFormData.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends CourseFormFindManyArgs>(args?: SelectSubset<T, CourseFormFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CourseFormPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends UserFormDataFindManyArgs>(args?: SelectSubset<T, UserFormDataFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserFormDataPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a CourseForm.
-     * @param {CourseFormCreateArgs} args - Arguments to create a CourseForm.
+     * Create a UserFormData.
+     * @param {UserFormDataCreateArgs} args - Arguments to create a UserFormData.
      * @example
-     * // Create one CourseForm
-     * const CourseForm = await prisma.courseForm.create({
+     * // Create one UserFormData
+     * const UserFormData = await prisma.userFormData.create({
      *   data: {
-     *     // ... data to create a CourseForm
+     *     // ... data to create a UserFormData
      *   }
      * })
      * 
      */
-    create<T extends CourseFormCreateArgs>(args: SelectSubset<T, CourseFormCreateArgs<ExtArgs>>): Prisma__CourseFormClient<$Result.GetResult<Prisma.$CourseFormPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends UserFormDataCreateArgs>(args: SelectSubset<T, UserFormDataCreateArgs<ExtArgs>>): Prisma__UserFormDataClient<$Result.GetResult<Prisma.$UserFormDataPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many CourseForms.
-     * @param {CourseFormCreateManyArgs} args - Arguments to create many CourseForms.
+     * Create many UserFormData.
+     * @param {UserFormDataCreateManyArgs} args - Arguments to create many UserFormData.
      * @example
-     * // Create many CourseForms
-     * const courseForm = await prisma.courseForm.createMany({
+     * // Create many UserFormData
+     * const userFormData = await prisma.userFormData.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends CourseFormCreateManyArgs>(args?: SelectSubset<T, CourseFormCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends UserFormDataCreateManyArgs>(args?: SelectSubset<T, UserFormDataCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Delete a CourseForm.
-     * @param {CourseFormDeleteArgs} args - Arguments to delete one CourseForm.
+     * Delete a UserFormData.
+     * @param {UserFormDataDeleteArgs} args - Arguments to delete one UserFormData.
      * @example
-     * // Delete one CourseForm
-     * const CourseForm = await prisma.courseForm.delete({
+     * // Delete one UserFormData
+     * const UserFormData = await prisma.userFormData.delete({
      *   where: {
-     *     // ... filter to delete one CourseForm
+     *     // ... filter to delete one UserFormData
      *   }
      * })
      * 
      */
-    delete<T extends CourseFormDeleteArgs>(args: SelectSubset<T, CourseFormDeleteArgs<ExtArgs>>): Prisma__CourseFormClient<$Result.GetResult<Prisma.$CourseFormPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends UserFormDataDeleteArgs>(args: SelectSubset<T, UserFormDataDeleteArgs<ExtArgs>>): Prisma__UserFormDataClient<$Result.GetResult<Prisma.$UserFormDataPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one CourseForm.
-     * @param {CourseFormUpdateArgs} args - Arguments to update one CourseForm.
+     * Update one UserFormData.
+     * @param {UserFormDataUpdateArgs} args - Arguments to update one UserFormData.
      * @example
-     * // Update one CourseForm
-     * const courseForm = await prisma.courseForm.update({
+     * // Update one UserFormData
+     * const userFormData = await prisma.userFormData.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1226,30 +1226,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends CourseFormUpdateArgs>(args: SelectSubset<T, CourseFormUpdateArgs<ExtArgs>>): Prisma__CourseFormClient<$Result.GetResult<Prisma.$CourseFormPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends UserFormDataUpdateArgs>(args: SelectSubset<T, UserFormDataUpdateArgs<ExtArgs>>): Prisma__UserFormDataClient<$Result.GetResult<Prisma.$UserFormDataPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more CourseForms.
-     * @param {CourseFormDeleteManyArgs} args - Arguments to filter CourseForms to delete.
+     * Delete zero or more UserFormData.
+     * @param {UserFormDataDeleteManyArgs} args - Arguments to filter UserFormData to delete.
      * @example
-     * // Delete a few CourseForms
-     * const { count } = await prisma.courseForm.deleteMany({
+     * // Delete a few UserFormData
+     * const { count } = await prisma.userFormData.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends CourseFormDeleteManyArgs>(args?: SelectSubset<T, CourseFormDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends UserFormDataDeleteManyArgs>(args?: SelectSubset<T, UserFormDataDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more CourseForms.
+     * Update zero or more UserFormData.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CourseFormUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {UserFormDataUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many CourseForms
-     * const courseForm = await prisma.courseForm.updateMany({
+     * // Update many UserFormData
+     * const userFormData = await prisma.userFormData.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1259,79 +1259,79 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends CourseFormUpdateManyArgs>(args: SelectSubset<T, CourseFormUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends UserFormDataUpdateManyArgs>(args: SelectSubset<T, UserFormDataUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one CourseForm.
-     * @param {CourseFormUpsertArgs} args - Arguments to update or create a CourseForm.
+     * Create or update one UserFormData.
+     * @param {UserFormDataUpsertArgs} args - Arguments to update or create a UserFormData.
      * @example
-     * // Update or create a CourseForm
-     * const courseForm = await prisma.courseForm.upsert({
+     * // Update or create a UserFormData
+     * const userFormData = await prisma.userFormData.upsert({
      *   create: {
-     *     // ... data to create a CourseForm
+     *     // ... data to create a UserFormData
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the CourseForm we want to update
+     *     // ... the filter for the UserFormData we want to update
      *   }
      * })
      */
-    upsert<T extends CourseFormUpsertArgs>(args: SelectSubset<T, CourseFormUpsertArgs<ExtArgs>>): Prisma__CourseFormClient<$Result.GetResult<Prisma.$CourseFormPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends UserFormDataUpsertArgs>(args: SelectSubset<T, UserFormDataUpsertArgs<ExtArgs>>): Prisma__UserFormDataClient<$Result.GetResult<Prisma.$UserFormDataPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more CourseForms that matches the filter.
-     * @param {CourseFormFindRawArgs} args - Select which filters you would like to apply.
+     * Find zero or more UserFormData that matches the filter.
+     * @param {UserFormDataFindRawArgs} args - Select which filters you would like to apply.
      * @example
-     * const courseForm = await prisma.courseForm.findRaw({
+     * const userFormData = await prisma.userFormData.findRaw({
      *   filter: { age: { $gt: 25 } }
      * })
      */
-    findRaw(args?: CourseFormFindRawArgs): Prisma.PrismaPromise<JsonObject>
+    findRaw(args?: UserFormDataFindRawArgs): Prisma.PrismaPromise<JsonObject>
 
     /**
-     * Perform aggregation operations on a CourseForm.
-     * @param {CourseFormAggregateRawArgs} args - Select which aggregations you would like to apply.
+     * Perform aggregation operations on a UserFormData.
+     * @param {UserFormDataAggregateRawArgs} args - Select which aggregations you would like to apply.
      * @example
-     * const courseForm = await prisma.courseForm.aggregateRaw({
+     * const userFormData = await prisma.userFormData.aggregateRaw({
      *   pipeline: [
      *     { $match: { status: "registered" } },
      *     { $group: { _id: "$country", total: { $sum: 1 } } }
      *   ]
      * })
      */
-    aggregateRaw(args?: CourseFormAggregateRawArgs): Prisma.PrismaPromise<JsonObject>
+    aggregateRaw(args?: UserFormDataAggregateRawArgs): Prisma.PrismaPromise<JsonObject>
 
 
     /**
-     * Count the number of CourseForms.
+     * Count the number of UserFormData.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CourseFormCountArgs} args - Arguments to filter CourseForms to count.
+     * @param {UserFormDataCountArgs} args - Arguments to filter UserFormData to count.
      * @example
-     * // Count the number of CourseForms
-     * const count = await prisma.courseForm.count({
+     * // Count the number of UserFormData
+     * const count = await prisma.userFormData.count({
      *   where: {
-     *     // ... the filter for the CourseForms we want to count
+     *     // ... the filter for the UserFormData we want to count
      *   }
      * })
     **/
-    count<T extends CourseFormCountArgs>(
-      args?: Subset<T, CourseFormCountArgs>,
+    count<T extends UserFormDataCountArgs>(
+      args?: Subset<T, UserFormDataCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], CourseFormCountAggregateOutputType>
+          : GetScalarType<T['select'], UserFormDataCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a CourseForm.
+     * Allows you to perform aggregations operations on a UserFormData.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CourseFormAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {UserFormDataAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1351,13 +1351,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends CourseFormAggregateArgs>(args: Subset<T, CourseFormAggregateArgs>): Prisma.PrismaPromise<GetCourseFormAggregateType<T>>
+    aggregate<T extends UserFormDataAggregateArgs>(args: Subset<T, UserFormDataAggregateArgs>): Prisma.PrismaPromise<GetUserFormDataAggregateType<T>>
 
     /**
-     * Group by CourseForm.
+     * Group by UserFormData.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {CourseFormGroupByArgs} args - Group by arguments.
+     * @param {UserFormDataGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1372,14 +1372,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends CourseFormGroupByArgs,
+      T extends UserFormDataGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: CourseFormGroupByArgs['orderBy'] }
-        : { orderBy?: CourseFormGroupByArgs['orderBy'] },
+        ? { orderBy: UserFormDataGroupByArgs['orderBy'] }
+        : { orderBy?: UserFormDataGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1428,20 +1428,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, CourseFormGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCourseFormGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, UserFormDataGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserFormDataGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the CourseForm model
+   * Fields of the UserFormData model
    */
-  readonly fields: CourseFormFieldRefs;
+  readonly fields: UserFormDataFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for CourseForm.
+   * The delegate class that acts as a "Promise-like" for UserFormData.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__CourseFormClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__UserFormDataClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1469,330 +1469,330 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the CourseForm model
+   * Fields of the UserFormData model
    */
-  interface CourseFormFieldRefs {
-    readonly id: FieldRef<"CourseForm", 'String'>
-    readonly fullName: FieldRef<"CourseForm", 'String'>
-    readonly fatherName: FieldRef<"CourseForm", 'String'>
-    readonly email: FieldRef<"CourseForm", 'String'>
-    readonly phoneNumber: FieldRef<"CourseForm", 'String'>
-    readonly city: FieldRef<"CourseForm", 'String'>
-    readonly province: FieldRef<"CourseForm", 'String'>
-    readonly education: FieldRef<"CourseForm", 'String'>
-    readonly course: FieldRef<"CourseForm", 'String'>
-    readonly message: FieldRef<"CourseForm", 'String'>
-    readonly createdAt: FieldRef<"CourseForm", 'DateTime'>
-    readonly updatedAt: FieldRef<"CourseForm", 'DateTime'>
+  interface UserFormDataFieldRefs {
+    readonly id: FieldRef<"UserFormData", 'String'>
+    readonly fullName: FieldRef<"UserFormData", 'String'>
+    readonly fatherName: FieldRef<"UserFormData", 'String'>
+    readonly email: FieldRef<"UserFormData", 'String'>
+    readonly phoneNumber: FieldRef<"UserFormData", 'String'>
+    readonly city: FieldRef<"UserFormData", 'String'>
+    readonly province: FieldRef<"UserFormData", 'String'>
+    readonly education: FieldRef<"UserFormData", 'String'>
+    readonly course: FieldRef<"UserFormData", 'String'>
+    readonly message: FieldRef<"UserFormData", 'String'>
+    readonly createdAt: FieldRef<"UserFormData", 'DateTime'>
+    readonly updatedAt: FieldRef<"UserFormData", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * CourseForm findUnique
+   * UserFormData findUnique
    */
-  export type CourseFormFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
     /**
-     * Filter, which CourseForm to fetch.
+     * Filter, which UserFormData to fetch.
      */
-    where: CourseFormWhereUniqueInput
+    where: UserFormDataWhereUniqueInput
   }
 
   /**
-   * CourseForm findUniqueOrThrow
+   * UserFormData findUniqueOrThrow
    */
-  export type CourseFormFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
     /**
-     * Filter, which CourseForm to fetch.
+     * Filter, which UserFormData to fetch.
      */
-    where: CourseFormWhereUniqueInput
+    where: UserFormDataWhereUniqueInput
   }
 
   /**
-   * CourseForm findFirst
+   * UserFormData findFirst
    */
-  export type CourseFormFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
     /**
-     * Filter, which CourseForm to fetch.
+     * Filter, which UserFormData to fetch.
      */
-    where?: CourseFormWhereInput
+    where?: UserFormDataWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of CourseForms to fetch.
+     * Determine the order of UserFormData to fetch.
      */
-    orderBy?: CourseFormOrderByWithRelationInput | CourseFormOrderByWithRelationInput[]
+    orderBy?: UserFormDataOrderByWithRelationInput | UserFormDataOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for CourseForms.
+     * Sets the position for searching for UserFormData.
      */
-    cursor?: CourseFormWhereUniqueInput
+    cursor?: UserFormDataWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` CourseForms from the position of the cursor.
+     * Take `±n` UserFormData from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` CourseForms.
+     * Skip the first `n` UserFormData.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of CourseForms.
+     * Filter by unique combinations of UserFormData.
      */
-    distinct?: CourseFormScalarFieldEnum | CourseFormScalarFieldEnum[]
+    distinct?: UserFormDataScalarFieldEnum | UserFormDataScalarFieldEnum[]
   }
 
   /**
-   * CourseForm findFirstOrThrow
+   * UserFormData findFirstOrThrow
    */
-  export type CourseFormFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
     /**
-     * Filter, which CourseForm to fetch.
+     * Filter, which UserFormData to fetch.
      */
-    where?: CourseFormWhereInput
+    where?: UserFormDataWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of CourseForms to fetch.
+     * Determine the order of UserFormData to fetch.
      */
-    orderBy?: CourseFormOrderByWithRelationInput | CourseFormOrderByWithRelationInput[]
+    orderBy?: UserFormDataOrderByWithRelationInput | UserFormDataOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for CourseForms.
+     * Sets the position for searching for UserFormData.
      */
-    cursor?: CourseFormWhereUniqueInput
+    cursor?: UserFormDataWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` CourseForms from the position of the cursor.
+     * Take `±n` UserFormData from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` CourseForms.
+     * Skip the first `n` UserFormData.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of CourseForms.
+     * Filter by unique combinations of UserFormData.
      */
-    distinct?: CourseFormScalarFieldEnum | CourseFormScalarFieldEnum[]
+    distinct?: UserFormDataScalarFieldEnum | UserFormDataScalarFieldEnum[]
   }
 
   /**
-   * CourseForm findMany
+   * UserFormData findMany
    */
-  export type CourseFormFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
     /**
-     * Filter, which CourseForms to fetch.
+     * Filter, which UserFormData to fetch.
      */
-    where?: CourseFormWhereInput
+    where?: UserFormDataWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of CourseForms to fetch.
+     * Determine the order of UserFormData to fetch.
      */
-    orderBy?: CourseFormOrderByWithRelationInput | CourseFormOrderByWithRelationInput[]
+    orderBy?: UserFormDataOrderByWithRelationInput | UserFormDataOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing CourseForms.
+     * Sets the position for listing UserFormData.
      */
-    cursor?: CourseFormWhereUniqueInput
+    cursor?: UserFormDataWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` CourseForms from the position of the cursor.
+     * Take `±n` UserFormData from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` CourseForms.
+     * Skip the first `n` UserFormData.
      */
     skip?: number
-    distinct?: CourseFormScalarFieldEnum | CourseFormScalarFieldEnum[]
+    distinct?: UserFormDataScalarFieldEnum | UserFormDataScalarFieldEnum[]
   }
 
   /**
-   * CourseForm create
+   * UserFormData create
    */
-  export type CourseFormCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
     /**
-     * The data needed to create a CourseForm.
+     * The data needed to create a UserFormData.
      */
-    data: XOR<CourseFormCreateInput, CourseFormUncheckedCreateInput>
+    data: XOR<UserFormDataCreateInput, UserFormDataUncheckedCreateInput>
   }
 
   /**
-   * CourseForm createMany
+   * UserFormData createMany
    */
-  export type CourseFormCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many CourseForms.
+     * The data used to create many UserFormData.
      */
-    data: CourseFormCreateManyInput | CourseFormCreateManyInput[]
+    data: UserFormDataCreateManyInput | UserFormDataCreateManyInput[]
   }
 
   /**
-   * CourseForm update
+   * UserFormData update
    */
-  export type CourseFormUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
     /**
-     * The data needed to update a CourseForm.
+     * The data needed to update a UserFormData.
      */
-    data: XOR<CourseFormUpdateInput, CourseFormUncheckedUpdateInput>
+    data: XOR<UserFormDataUpdateInput, UserFormDataUncheckedUpdateInput>
     /**
-     * Choose, which CourseForm to update.
+     * Choose, which UserFormData to update.
      */
-    where: CourseFormWhereUniqueInput
+    where: UserFormDataWhereUniqueInput
   }
 
   /**
-   * CourseForm updateMany
+   * UserFormData updateMany
    */
-  export type CourseFormUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update CourseForms.
+     * The data used to update UserFormData.
      */
-    data: XOR<CourseFormUpdateManyMutationInput, CourseFormUncheckedUpdateManyInput>
+    data: XOR<UserFormDataUpdateManyMutationInput, UserFormDataUncheckedUpdateManyInput>
     /**
-     * Filter which CourseForms to update
+     * Filter which UserFormData to update
      */
-    where?: CourseFormWhereInput
+    where?: UserFormDataWhereInput
     /**
-     * Limit how many CourseForms to update.
+     * Limit how many UserFormData to update.
      */
     limit?: number
   }
 
   /**
-   * CourseForm upsert
+   * UserFormData upsert
    */
-  export type CourseFormUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
     /**
-     * The filter to search for the CourseForm to update in case it exists.
+     * The filter to search for the UserFormData to update in case it exists.
      */
-    where: CourseFormWhereUniqueInput
+    where: UserFormDataWhereUniqueInput
     /**
-     * In case the CourseForm found by the `where` argument doesn't exist, create a new CourseForm with this data.
+     * In case the UserFormData found by the `where` argument doesn't exist, create a new UserFormData with this data.
      */
-    create: XOR<CourseFormCreateInput, CourseFormUncheckedCreateInput>
+    create: XOR<UserFormDataCreateInput, UserFormDataUncheckedCreateInput>
     /**
-     * In case the CourseForm was found with the provided `where` argument, update it with this data.
+     * In case the UserFormData was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<CourseFormUpdateInput, CourseFormUncheckedUpdateInput>
+    update: XOR<UserFormDataUpdateInput, UserFormDataUncheckedUpdateInput>
   }
 
   /**
-   * CourseForm delete
+   * UserFormData delete
    */
-  export type CourseFormDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
     /**
-     * Filter which CourseForm to delete.
+     * Filter which UserFormData to delete.
      */
-    where: CourseFormWhereUniqueInput
+    where: UserFormDataWhereUniqueInput
   }
 
   /**
-   * CourseForm deleteMany
+   * UserFormData deleteMany
    */
-  export type CourseFormDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which CourseForms to delete
+     * Filter which UserFormData to delete
      */
-    where?: CourseFormWhereInput
+    where?: UserFormDataWhereInput
     /**
-     * Limit how many CourseForms to delete.
+     * Limit how many UserFormData to delete.
      */
     limit?: number
   }
 
   /**
-   * CourseForm findRaw
+   * UserFormData findRaw
    */
-  export type CourseFormFindRawArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataFindRawArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * The query predicate filter. If unspecified, then all documents in the collection will match the predicate. ${@link https://docs.mongodb.com/manual/reference/operator/query MongoDB Docs}.
      */
@@ -1804,9 +1804,9 @@ export namespace Prisma {
   }
 
   /**
-   * CourseForm aggregateRaw
+   * UserFormData aggregateRaw
    */
-  export type CourseFormAggregateRawArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataAggregateRawArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * An array of aggregation stages to process and transform the document stream via the aggregation pipeline. ${@link https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline MongoDB Docs}.
      */
@@ -1818,17 +1818,17 @@ export namespace Prisma {
   }
 
   /**
-   * CourseForm without action
+   * UserFormData without action
    */
-  export type CourseFormDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFormDataDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the CourseForm
+     * Select specific fields to fetch from the UserFormData
      */
-    select?: CourseFormSelect<ExtArgs> | null
+    select?: UserFormDataSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the CourseForm
+     * Omit specific fields from the UserFormData
      */
-    omit?: CourseFormOmit<ExtArgs> | null
+    omit?: UserFormDataOmit<ExtArgs> | null
   }
 
 
@@ -1836,7 +1836,7 @@ export namespace Prisma {
    * Enums
    */
 
-  export const CourseFormScalarFieldEnum: {
+  export const UserFormDataScalarFieldEnum: {
     id: 'id',
     fullName: 'fullName',
     fatherName: 'fatherName',
@@ -1851,7 +1851,7 @@ export namespace Prisma {
     updatedAt: 'updatedAt'
   };
 
-  export type CourseFormScalarFieldEnum = (typeof CourseFormScalarFieldEnum)[keyof typeof CourseFormScalarFieldEnum]
+  export type UserFormDataScalarFieldEnum = (typeof UserFormDataScalarFieldEnum)[keyof typeof UserFormDataScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1920,25 +1920,25 @@ export namespace Prisma {
    */
 
 
-  export type CourseFormWhereInput = {
-    AND?: CourseFormWhereInput | CourseFormWhereInput[]
-    OR?: CourseFormWhereInput[]
-    NOT?: CourseFormWhereInput | CourseFormWhereInput[]
-    id?: StringFilter<"CourseForm"> | string
-    fullName?: StringFilter<"CourseForm"> | string
-    fatherName?: StringFilter<"CourseForm"> | string
-    email?: StringFilter<"CourseForm"> | string
-    phoneNumber?: StringFilter<"CourseForm"> | string
-    city?: StringFilter<"CourseForm"> | string
-    province?: StringFilter<"CourseForm"> | string
-    education?: StringFilter<"CourseForm"> | string
-    course?: StringFilter<"CourseForm"> | string
-    message?: StringFilter<"CourseForm"> | string
-    createdAt?: DateTimeFilter<"CourseForm"> | Date | string
-    updatedAt?: DateTimeFilter<"CourseForm"> | Date | string
+  export type UserFormDataWhereInput = {
+    AND?: UserFormDataWhereInput | UserFormDataWhereInput[]
+    OR?: UserFormDataWhereInput[]
+    NOT?: UserFormDataWhereInput | UserFormDataWhereInput[]
+    id?: StringFilter<"UserFormData"> | string
+    fullName?: StringFilter<"UserFormData"> | string
+    fatherName?: StringFilter<"UserFormData"> | string
+    email?: StringFilter<"UserFormData"> | string
+    phoneNumber?: StringFilter<"UserFormData"> | string
+    city?: StringFilter<"UserFormData"> | string
+    province?: StringFilter<"UserFormData"> | string
+    education?: StringFilter<"UserFormData"> | string
+    course?: StringFilter<"UserFormData"> | string
+    message?: StringFilter<"UserFormData"> | string
+    createdAt?: DateTimeFilter<"UserFormData"> | Date | string
+    updatedAt?: DateTimeFilter<"UserFormData"> | Date | string
   }
 
-  export type CourseFormOrderByWithRelationInput = {
+  export type UserFormDataOrderByWithRelationInput = {
     id?: SortOrder
     fullName?: SortOrder
     fatherName?: SortOrder
@@ -1953,25 +1953,25 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type CourseFormWhereUniqueInput = Prisma.AtLeast<{
+  export type UserFormDataWhereUniqueInput = Prisma.AtLeast<{
     id?: string
     email?: string
-    AND?: CourseFormWhereInput | CourseFormWhereInput[]
-    OR?: CourseFormWhereInput[]
-    NOT?: CourseFormWhereInput | CourseFormWhereInput[]
-    fullName?: StringFilter<"CourseForm"> | string
-    fatherName?: StringFilter<"CourseForm"> | string
-    phoneNumber?: StringFilter<"CourseForm"> | string
-    city?: StringFilter<"CourseForm"> | string
-    province?: StringFilter<"CourseForm"> | string
-    education?: StringFilter<"CourseForm"> | string
-    course?: StringFilter<"CourseForm"> | string
-    message?: StringFilter<"CourseForm"> | string
-    createdAt?: DateTimeFilter<"CourseForm"> | Date | string
-    updatedAt?: DateTimeFilter<"CourseForm"> | Date | string
+    AND?: UserFormDataWhereInput | UserFormDataWhereInput[]
+    OR?: UserFormDataWhereInput[]
+    NOT?: UserFormDataWhereInput | UserFormDataWhereInput[]
+    fullName?: StringFilter<"UserFormData"> | string
+    fatherName?: StringFilter<"UserFormData"> | string
+    phoneNumber?: StringFilter<"UserFormData"> | string
+    city?: StringFilter<"UserFormData"> | string
+    province?: StringFilter<"UserFormData"> | string
+    education?: StringFilter<"UserFormData"> | string
+    course?: StringFilter<"UserFormData"> | string
+    message?: StringFilter<"UserFormData"> | string
+    createdAt?: DateTimeFilter<"UserFormData"> | Date | string
+    updatedAt?: DateTimeFilter<"UserFormData"> | Date | string
   }, "id" | "email">
 
-  export type CourseFormOrderByWithAggregationInput = {
+  export type UserFormDataOrderByWithAggregationInput = {
     id?: SortOrder
     fullName?: SortOrder
     fatherName?: SortOrder
@@ -1984,30 +1984,30 @@ export namespace Prisma {
     message?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    _count?: CourseFormCountOrderByAggregateInput
-    _max?: CourseFormMaxOrderByAggregateInput
-    _min?: CourseFormMinOrderByAggregateInput
+    _count?: UserFormDataCountOrderByAggregateInput
+    _max?: UserFormDataMaxOrderByAggregateInput
+    _min?: UserFormDataMinOrderByAggregateInput
   }
 
-  export type CourseFormScalarWhereWithAggregatesInput = {
-    AND?: CourseFormScalarWhereWithAggregatesInput | CourseFormScalarWhereWithAggregatesInput[]
-    OR?: CourseFormScalarWhereWithAggregatesInput[]
-    NOT?: CourseFormScalarWhereWithAggregatesInput | CourseFormScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"CourseForm"> | string
-    fullName?: StringWithAggregatesFilter<"CourseForm"> | string
-    fatherName?: StringWithAggregatesFilter<"CourseForm"> | string
-    email?: StringWithAggregatesFilter<"CourseForm"> | string
-    phoneNumber?: StringWithAggregatesFilter<"CourseForm"> | string
-    city?: StringWithAggregatesFilter<"CourseForm"> | string
-    province?: StringWithAggregatesFilter<"CourseForm"> | string
-    education?: StringWithAggregatesFilter<"CourseForm"> | string
-    course?: StringWithAggregatesFilter<"CourseForm"> | string
-    message?: StringWithAggregatesFilter<"CourseForm"> | string
-    createdAt?: DateTimeWithAggregatesFilter<"CourseForm"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"CourseForm"> | Date | string
+  export type UserFormDataScalarWhereWithAggregatesInput = {
+    AND?: UserFormDataScalarWhereWithAggregatesInput | UserFormDataScalarWhereWithAggregatesInput[]
+    OR?: UserFormDataScalarWhereWithAggregatesInput[]
+    NOT?: UserFormDataScalarWhereWithAggregatesInput | UserFormDataScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserFormData"> | string
+    fullName?: StringWithAggregatesFilter<"UserFormData"> | string
+    fatherName?: StringWithAggregatesFilter<"UserFormData"> | string
+    email?: StringWithAggregatesFilter<"UserFormData"> | string
+    phoneNumber?: StringWithAggregatesFilter<"UserFormData"> | string
+    city?: StringWithAggregatesFilter<"UserFormData"> | string
+    province?: StringWithAggregatesFilter<"UserFormData"> | string
+    education?: StringWithAggregatesFilter<"UserFormData"> | string
+    course?: StringWithAggregatesFilter<"UserFormData"> | string
+    message?: StringWithAggregatesFilter<"UserFormData"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"UserFormData"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"UserFormData"> | Date | string
   }
 
-  export type CourseFormCreateInput = {
+  export type UserFormDataCreateInput = {
     id?: string
     fullName: string
     fatherName: string
@@ -2022,7 +2022,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type CourseFormUncheckedCreateInput = {
+  export type UserFormDataUncheckedCreateInput = {
     id?: string
     fullName: string
     fatherName: string
@@ -2037,7 +2037,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type CourseFormUpdateInput = {
+  export type UserFormDataUpdateInput = {
     fullName?: StringFieldUpdateOperationsInput | string
     fatherName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -2051,7 +2051,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type CourseFormUncheckedUpdateInput = {
+  export type UserFormDataUncheckedUpdateInput = {
     fullName?: StringFieldUpdateOperationsInput | string
     fatherName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -2065,7 +2065,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type CourseFormCreateManyInput = {
+  export type UserFormDataCreateManyInput = {
     id?: string
     fullName: string
     fatherName: string
@@ -2080,7 +2080,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type CourseFormUpdateManyMutationInput = {
+  export type UserFormDataUpdateManyMutationInput = {
     fullName?: StringFieldUpdateOperationsInput | string
     fatherName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -2094,7 +2094,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type CourseFormUncheckedUpdateManyInput = {
+  export type UserFormDataUncheckedUpdateManyInput = {
     fullName?: StringFieldUpdateOperationsInput | string
     fatherName?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -2134,7 +2134,7 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type CourseFormCountOrderByAggregateInput = {
+  export type UserFormDataCountOrderByAggregateInput = {
     id?: SortOrder
     fullName?: SortOrder
     fatherName?: SortOrder
@@ -2149,7 +2149,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type CourseFormMaxOrderByAggregateInput = {
+  export type UserFormDataMaxOrderByAggregateInput = {
     id?: SortOrder
     fullName?: SortOrder
     fatherName?: SortOrder
@@ -2164,7 +2164,7 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
-  export type CourseFormMinOrderByAggregateInput = {
+  export type UserFormDataMinOrderByAggregateInput = {
     id?: SortOrder
     fullName?: SortOrder
     fatherName?: SortOrder

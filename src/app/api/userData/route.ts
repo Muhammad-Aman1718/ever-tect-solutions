@@ -40,14 +40,13 @@ export const POST = async (req: NextRequest) => {
       );
     }
 
-    const existingUser = await prisma.courseForm.findUnique({
+    const existingUser = await prisma.userFormData.findUnique({
       where: {
         email: email, // Check for duplicate email
       },
     });
 
-    console.log(existingUser , "this is exsiting user ");
-    
+    console.log(existingUser, "this is exsiting user ");
 
     if (existingUser) {
       return NextResponse.json(
@@ -55,16 +54,18 @@ export const POST = async (req: NextRequest) => {
           success: false,
           message: "A user with this email has already submitted the form",
         },
-        { status: 500 }
+        { status: 400 }
       );
     }
 
-    const carData = await prisma.courseForm.create({
+    const userFormData = await prisma.userFormData.create({
       data: {
         fullName: fullName,
         fatherName: fatherName,
         email: email,
         phoneNumber: phoneNumber,
+        city: city,
+        province: province,
         education: education,
         course: course,
         message: message,
@@ -74,7 +75,7 @@ export const POST = async (req: NextRequest) => {
     return NextResponse.json({
       success: true,
       message: "User Data saved successfully",
-      car: carData,
+      data: userFormData,
     });
   } catch (error) {
     const errorAxios = error as AxiosError;

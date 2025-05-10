@@ -51,11 +51,18 @@ const useApplyCourse = () => {
       return false;
     }
 
+    if (!nameRegex.test(city)) {
+      showToast("error", "City should only contain alphabets. ");
+      return false;
+    }
+
     if (
       !fullName ||
       !fatherName ||
       !email ||
       !phoneNumber ||
+      !city ||
+      !province ||
       !education ||
       !course ||
       !message
@@ -76,6 +83,8 @@ const useApplyCourse = () => {
       fatherName,
       email,
       phoneNumber,
+      city,
+      province,
       education,
       course,
       message,
@@ -96,6 +105,8 @@ const useApplyCourse = () => {
       setFatherName("");
       setEmail("");
       setPhoneNumber("");
+      setCity("");
+      setProvince("");
       setEducation("");
       setCourse("");
       setMessage("");
