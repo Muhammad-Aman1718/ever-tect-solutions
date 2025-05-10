@@ -6,6 +6,12 @@ interface ContactUsInputPropsTypes {
   label?: string;
   inputType?: React.HTMLInputTypeAttribute;
   placeholder?: string;
+  value?: string;
+  onChange?: (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => void;
 }
 
 const InputField: React.FC<ContactUsInputPropsTypes> = ({
@@ -14,6 +20,8 @@ const InputField: React.FC<ContactUsInputPropsTypes> = ({
   label,
   inputType,
   placeholder,
+  value,
+  onChange,
 }) => {
   return (
     <div>
@@ -21,6 +29,8 @@ const InputField: React.FC<ContactUsInputPropsTypes> = ({
         {label}
       </label>
       <input
+        value={value}
+        onChange={onChange}
         type={inputType}
         placeholder={placeholder}
         className={` ${inputClassName} placeholder:text-[#504f4f] w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition`}

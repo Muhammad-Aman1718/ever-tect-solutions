@@ -6,7 +6,22 @@ import useApplyCourse from "@/hooks/useApplyCourse";
 import { courseOptions, educationOptions } from "@/constant/data";
 
 const Form = () => {
-  const { course, setCourse } = useApplyCourse();
+  const {
+    fullName,
+    setFullName,
+    fatherName,
+    setFatherName,
+    email,
+    setEmail,
+    phoneNumber,
+    setPhoneNumber,
+    education,
+    setEducation,
+    course,
+    setCourse,
+    message,
+    setMessage,
+  } = useApplyCourse();
 
   return (
     <div>
@@ -17,23 +32,31 @@ const Form = () => {
         </h1>
         <div className="grid grid-cols-2  gap-x-10 gap-y-7 ">
           <InputField
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
             label="Full Name"
             labelClassName=" font-bold "
             placeholder="Enter your full name"
             inputType="text"
           />
           <InputField
+            value={fatherName}
+            onChange={(e) => setFatherName(e.target.value)}
             label="Father Name"
             labelClassName="font-bold"
             placeholder="Enter your father name "
             inputType="text"
           />
           <InputField
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             label="Email Address"
             labelClassName="font-bold"
             placeholder="Enter your email address"
           />
           <InputField
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
             label="Phone Number"
             labelClassName="font-bold"
             placeholder="+92 (300) 1234567"
@@ -43,6 +66,8 @@ const Form = () => {
               Education Level
             </label>
             <select
+              value={education}
+              onChange={(e) => setEducation(e.target.value)}
               name="education"
               required
               className="w-full border border-gray-300 rounded-md text-[#504f4f] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition"
@@ -57,7 +82,6 @@ const Form = () => {
               ))}
             </select>
           </div>
-
           <div>
             <label className="block mb-1 text-gray-700  font-bold">
               Select Course
@@ -84,10 +108,11 @@ const Form = () => {
               Message (optional)
             </label>
             <textarea
+              value={message}
               name="message"
               rows={4}
               className=" w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2A75BB] transition"
-              // onChange={handleChange}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
         </div>
